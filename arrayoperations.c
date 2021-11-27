@@ -89,9 +89,9 @@ void insert()
     {
      printf("\n Enter the element to be inserted:\t");
      scanf("%d",&elem);
-     for(i=n-1;i>=pos;i--)
+     for(i=n-1;i>=pos-1;i--)
            a[i+1]=a[i]; // right shift elements before insertion
-    a[pos]=elem; // insert element
+    a[pos-1]=elem; // insert element
     n++; // increase number of elements by 1
     }
 }
@@ -106,7 +106,7 @@ void delete()
  else
     {
      printf("\n The deleted element is %d",a[pos]); // display the deleting element at the given position
-     for(i=pos;i<n-1;i++)
+     for(i=pos-1;i<n-1;i++)
            a[i]=a[i+1]; // left shift elements after deletion
      n--; // reduce number of elements by 1
     }
